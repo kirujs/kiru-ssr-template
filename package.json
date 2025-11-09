@@ -19,7 +19,7 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vite": "^7.2.2",
-    "vite-plugin-kiru": "0.29.11"
+    "vite-plugin-kiru": "0.30.0"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.5",
@@ -27,7 +27,7 @@
     "@universal-middleware/hono": "^0.4.17",
     "dotenv": "^17.2.3",
     "hono": "^4.10.3",
-    "kiru": "0.51.7",
+    "kiru": "0.51.8",
     "vike": "^0.4.244"
   }
 }

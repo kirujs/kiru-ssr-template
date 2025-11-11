@@ -27,7 +27,7 @@
     "@universal-middleware/hono": "^0.4.17",
     "dotenv": "^17.2.3",
     "hono": "^4.10.3",
-    "kiru": "0.51.8",
+    "kiru": "0.51.9",
     "vike": "^0.4.244"
   }
 }

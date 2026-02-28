@@ -1,4 +1,4 @@
-import { Derive, usePromise } from "kiru"
+import { Derive, statefulPromise } from "kiru"
 
 interface ProductsResponse {
   products: {
@@ -17,14 +17,14 @@ interface ProductsResponse {
 }
 
 export function Page() {
-  const products = usePromise<ProductsResponse>(async (signal) => {
+  const products = statefulPromise<ProductsResponse>(async (signal) => {
     await new Promise((resolve) => setTimeout(resolve, 500))
     const response = await fetch("https://dummyjson.com/products", { signal })
     if (!response.ok) throw new Error(response.statusText)
     return await response.json()
-  }, [])
+  })
 
-  return (
+  return () => (
     <Derive from={products} fallback={<div>Loading...</div>}>
       {(data) => (
         <ul>

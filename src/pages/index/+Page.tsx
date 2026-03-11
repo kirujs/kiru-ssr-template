@@ -3,18 +3,15 @@ import { ref, signal } from "kiru"
 export function Page() {
   const count = signal(0)
   const countRef = ref<HTMLDivElement>(null)
-  const animRef = ref<Animation>()
+  let animation: Animation | undefined
 
   const handleClick = () => {
     count.value++
 
-    animRef.current?.finish()
-    animRef.current = countRef.current?.animate(
+    animation?.finish()
+    animation = countRef.current?.animate(
       [{ transform: "scale(2.5)" }, { transform: "scale(1)" }],
-      {
-        duration: 300,
-        iterations: 1,
-      }
+      { duration: 300, iterations: 1 }
     )
   }
 

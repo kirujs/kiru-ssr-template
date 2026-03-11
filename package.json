@@ -4,8 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "vike dev",
-    "build": "vike build",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "cross-env NODE_ENV=production tsx ./src/server/hono-entry.node.ts"
   },
   "keywords": [],
